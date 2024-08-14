@@ -1,17 +1,17 @@
 # Basket class
 
 
-| Member variable | Data type              |
-|-----------------|------------------------|
-| `bagels`        | `Hashmap<String, int>` |
-| `basket`        | `List<String>`         |
-| `basketSize`    | `int`                  |
+| Member variable | Data type                         |
+|-----------------|-----------------------------------|
+| `bagelMenu`     | `static Hashmap<String, Integer>` |
+| `basket`        | `ArrayList<String>`               |
+| `basketSize`    | `int`                             |
+| `isManager`     | `Boolean`                         |
 
 
 
-| Method                | Scenario                                                                              | Output                       |
-|-----------------------|---------------------------------------------------------------------------------------|------------------------------|
-| `addBagel(String)`    | Basket not full<br/>Basket is full                                                    | Return true<br/>Return false |
-| `removeBagel(String)` | Bagel exists in basket<br/>Bagel does not exist in basket                             | Return true<br/>Return false |
-| `getBasketSize()`     |                                                                                       | Return basket size           |
-| `setBasketSize(int)`  | Basket capacity is changed to a whole, positive number<br/>Basket capacity is invalid | Return true<br/>Return false |
+| Method                | Scenario                                                                                                                                  | Output                                                                                                   |
+|-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|
+| `addBagel(String)`    | Basket not full<br/>Basket is full<br/>Bagel not on the menu                                                                              | Return "Bagel added to basket."<br/>Return "Basket is full."<br/>Return "This bagel is not on the menu." |
+| `removeBagel(String)` | Bagel exists in basket<br/>Bagel does not exist in basket                                                                                 | Return "Bagel removed from basket."<br/>Return "This bagel is not in your basket."                       |
+| `setBasketSize(int)`  | Basket capacity is changed to a positive integer by a manager<br/>Basket capacity value is not positive<br/>Basket capacity is changed by a non-manager | Return true<br/>Return false<br/>Return false                                                            |
